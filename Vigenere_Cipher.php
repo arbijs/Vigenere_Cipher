@@ -54,7 +54,7 @@ class Vigenere_Cipher {
 		}
 	}
 	
-	public function encript($kunci,$pesan){
+	public function encrypt($kunci,$pesan){
 		$this->__rumus_encript();
 		$pesan = str_split(str_replace(" ",'',$pesan));
 		$kunci = str_split(str_replace(" ","",$kunci));
@@ -80,7 +80,7 @@ class Vigenere_Cipher {
 
 	}
 	
-	public function decript($kunci,$pesan){
+	public function decrypt($kunci,$pesan){
 		$pesan = str_split(str_replace(" ",'',$pesan));
 		$kunci = str_split(str_replace(" ","",$kunci));
 		$jumlah_kunci = count($kunci);
@@ -94,8 +94,3 @@ class Vigenere_Cipher {
 	}
 
 }
-
-$my = new Vigenere_Cipher;
-echo $my->encript("BLOG","RASAMAUTAU")."<br/>";
-echo $my->decript("BLOG","SLGGNLIZBF");
-echo $my->table_reference();
